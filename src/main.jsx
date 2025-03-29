@@ -2,6 +2,7 @@ import '@mysten/dapp-kit/dist/index.css';
 import { createRoot } from 'react-dom/client';
 
 import App from './App';
+import './styles/index.css';
 import { StrictMode } from 'react';
 import { SuiClientProvider, WalletProvider } from '@mysten/dapp-kit';
 import { getFullnodeUrl } from '@mysten/sui.js/client';
