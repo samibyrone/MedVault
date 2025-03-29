@@ -5,7 +5,7 @@ const GoogleLoginComponent = ({ onSuccess }) => {
   return (
     <GoogleLogin
       onSuccess={credentialResponse => {
-        // Extract token or user info
+      
         onSuccess(credentialResponse);
       }}
       onError={() => {

@@ -1,12 +1,12 @@
 import React from "react";
-import Button from "../layout/Button.jsx";
-import BlogCard from "../layout/BlogCard.jsx";
-import img1 from "../../assets/image/blog1.jpg";
-import img2 from "../../assets/image/blog2.jpg";
-import img3 from "../../assets/image/blog3.jpg";
-import img4 from "../../assets/image/blog4.jpg";
-import img5 from "../../assets/image/blog5.jpg";
-import img6 from "../../assets/image/blog6.jpg";
+import Button from "./layout/Button.jsx";
+import BlogCard from "./layout/BlogCard.jsx";
+// import img1 from "../../assets/image/blog1.jpg";
+// import img2 from "../../assets/image/blog2.jpg";
+// import img3 from "../../assets/image/blog3.jpg";
+// import img4 from "../../assets/image/blog4.jpg";
+// import img5 from "../../assets/image/blog5.jpg";
+// import img6 from "../../assets/image/blog6.jpg";
 
 export const Blogs = () => {
 
@@ -25,7 +25,10 @@ export const Blogs = () => {
                     <Button title="Our Articles" />
                 </div>
             </div>
-            <BlogCard />
+
+            <div className="flex flex-col justify-center items-center gap-4">
+                <BlogCard />
+            </div>
             {/* <div className=" my-8">
                 <div className=" flex flex-wrap justify-center gap-5">
                     <BlogCard image={img1} headlines="How Secure Are Your Health Records?" />

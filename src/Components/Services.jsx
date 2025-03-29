@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "../layout/Button.jsx";
+import Button from "./layout/Button.jsx";
 import { RiMicroscopeLine } from "react-icons/ri";
-import ServicesCard from "../layout/ServiceCard.jsx";
+import ServicesCard from "./layout/ServiceCard.jsx";
 import { MdHealthAndSafety } from "react-icons/md";
 import { FaHeartbeat } from "react-icons/fa";
 
@@ -21,7 +21,7 @@ export const Services = () => {
                     <h1 className=" text-4xl font-semibold text-center lg:text-start">
                         Our Services
                     </h1>
-                    <p className=" mt-2 text-center lg:text-start">
+                    <p className=" mt-2 text-center lg:text-start pb-10">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, quidem.
                     </p>
                 </div>

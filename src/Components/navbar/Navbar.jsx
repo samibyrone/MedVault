@@ -40,11 +40,13 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import Button from "../layout/Button.jsx";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import {Contact} from "../models/Contact";
+import Contact from "../models/Contact.jsx";
 
 export const Navbar = () => {
     const [menu, setMenu] = useState(false);
     const [showForm, setShowForm] = useState(false);
+    const [login, setLogin] = useState(false);
+    const[logout, setLogout] = useState(false);
 
     const handleChange = () => {
         setMenu(!menu);
@@ -63,8 +65,26 @@ export const Navbar = () => {
         setShowForm(false);
     };
 
+    const openLogin = () => {
+        setLogin(true);
+        setMenu(false);
+    };
+
+    const closeLogin = () => {
+        setLogin(false);
+    };
+
+    const openLogout = () => {
+        setLogout(true);
+        setMenu(false);
+    };
+
+    const closeLogout = () => {
+        setLogout(false);
+    };
+
     return (
-        <div className=" container justify-between w-full z-50 text-white">
+        <div className="  w-full z-10 text-white"> //container justify-between w-full z-50 text-white
             <div>
                 <div className=" navbar flex flex-row justify-between p-5 md:px-32 px-5 bg-backgroundColor shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
                     <div className=" flex flex-row items-center cursor-pointer">
@@ -80,13 +100,13 @@ export const Navbar = () => {
                         <Link to="about" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer">
                             About Us
                         </Link>
-                        <Link to="services" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer">
+                        <Link to="service" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer">
                             Services
                         </Link>
-                        <Link to="doctors" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer">
+                        <Link to="appointment" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer">
                             Appointments
                         </Link>
-                        <Link to="contact" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer">
+                        <Link to="Contact" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer">
                             Contact Us
                         </Link>
                         <Link to="blog" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer">
@@ -121,13 +141,13 @@ export const Navbar = () => {
                     <Link to="about" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer" onClick={closeMenu}>
                         About Us
                     </Link>
-                    <Link to="services" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer" onClick={closeMenu}>
+                    <Link to="service" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer" onClick={closeMenu}>
                         Services
                     </Link>
                     <Link to="appointment" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer" onClick={closeMenu}>
                         Appointments
                     </Link>
-                    <Link to="contact" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer" onClick={closeMenu}>
+                    <Link to="Contact" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer" onClick={closeMenu}>
                         Contact Us
                     </Link>
                     <Link to="blog" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer" onClick={closeMenu}>
@@ -136,7 +156,7 @@ export const Navbar = () => {
 
                     <div className=" lg:hidden">
                         <Button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out" onClick={openForm}>
-                            Login
+                            Login 
                         </Button>
                     </div>
                 </div>

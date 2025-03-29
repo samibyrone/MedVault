@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../layout/Button.jsx";
+import Button from "./layout/Button.jsx";
 
 export const Home = () => {
     return (

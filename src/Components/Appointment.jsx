@@ -13,22 +13,22 @@ export const Appointment = () => {
         },
         {
             images: "/src/assets/image/doc2.jpg",
-            name: "Dr. Gerard Nwazuruoke",
+            name: "Dr. Seun Emmanuel",
             specialties: "Cardiologist",
         },
         {
             images: "/src/assets/image/doc3.jpg",
-            name: "Dr. Oluwaseun Emmanuel Babalola",
+            name: "Dr. Gerard Nwazuruoke",
             specialties: "Pediatrician",
         },
         {
             images: "/src/assets/image/doc4.jpg",
-            name: "Dr. Samson Ibironke",
+            name: "Dr. Ashley Emmanuel",
             specialties: "Neurologist",
         },
         {
             images: "/src/assets/image/doc5.jpg",
-            name: "Dr. Ashley Emmanuel",
+            name: "Dr. Samson Ibironke",
             specialties: "Dermatologist",
         },
         {
@@ -111,18 +111,18 @@ export const Appointment = () => {
             </div>
             <div className=" mt-5">
                 <Slider ref={slider} {...settings}>
-                    {data.map((e, index) => (
+                    {data.map((doctor, index) => (
                         <div
                             className="h-[350px] gap-10 text-black rounded-xl shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mb-2 cursor-pointer"
                             key={index}
                         >
                             <div>
-                                <img src={e.images} alt="img" className=" h-56 rounded-t-xl w-full pl" />
+                                <img src={doctor.images} alt="img" className=" h-56 rounded-t-xl w-full pl" />
                             </div>
 
                             <div className=" flex flex-col justify-center items-center">
-                                <h1 className=" font-semibold text-xl pt-4">{e.name}</h1>
-                                <h3 className=" pt-2">{e.specialties}</h3>
+                                <h1 className=" font-semibold text-xl pt-4">{doctor.name}</h1>
+                                <h3 className=" pt-2">{doctor.specialties}</h3>
                             </div>
                         </div>
                     ))}

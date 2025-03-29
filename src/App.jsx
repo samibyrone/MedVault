@@ -1,12 +1,13 @@
 import './App.css'
 import { ConnectButton, useCurrentAccount } from '@mysten/dapp-kit'
 import { Navbar } from './Components/navbar/Navbar';
-import { Home } from './Components/home/Home';
-import { About } from './Components/about/About';
-import { Services } from './Components/services/Services';
-import { Appointment } from './Components/appointment/Appointment';
-import { Blogs } from './Components/blog/Blogs';
-// import { Footer } from './Components/footer/Footer';
+import { Home } from './Components/Home';
+import { About } from './Components/About';
+import { Services } from './Components/Services';
+import { Appointment } from './Components/Appointment';
+import { Blogs } from './Components/Blogs';
+import Footer from './Components/Footer';
+import Contact from './Components/models/Contact';
 
 function App() {
 
@@ -16,8 +17,8 @@ function App() {
     <div>
         <Navbar />
       <nav>
-        <ConnectButton/>
         <main>
+        <ConnectButton/>
                 <div id="home">
                     <Home/>
                 </div>
@@ -38,11 +39,19 @@ function App() {
                     <Blogs/>
                 </div>
             </main>
-            {/*<Footer />*/}
 
+      {/* <Contact /> */}
             MedVualt
       </nav>
-      {/* <section>{account ? "No wallet connecter" : `Your address is ${account.address}`}</section> */}
+      <section>
+        {account ? (
+          <p>Your address is {account.address}</p>
+        ) : (
+          <p>No wallet connected</p>
+        )}
+      </section>
+
+        <Footer />
     </div>
   );
 };
