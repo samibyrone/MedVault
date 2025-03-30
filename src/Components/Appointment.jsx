@@ -87,12 +87,12 @@ export const Appointment = () => {
                     <p className=" mt-2 text-center lg:text-start text-2xl font-semibold">
                         Need to see a doctor?
                     </p>
-                    {/* <ul className="items-center text-2xl">
+                        <ul className="items-center text-2xl">
                         <li>Choose a date and time that works for you.</li>
                         <li>Receive a confirmation email with appointment details.</li>
                         <li>Book an Appointment Now.</li>
                         <li> Select your preferred healthcare provider.</li>
-                    </ul> */}
+                    </ul>
                 </div>
                 <div className="flex gap-5 mt-4 lg:mt-0">
                     <button
