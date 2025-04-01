@@ -14,18 +14,12 @@ export default function Login({ onSuccess }) {
                         <h1 className="text-4xl font-semibold text-center text-backgroundColor">
                             Sign In
                         </h1>
-                        <div className=" flex flex-col">
-                            <input className="py-3 px-2 bg-[#d5f2ec] rounded-lg" type="text" name="userFirstName" id="userFirstName" placeholder="First Name" />
-                        </div>
-                        <div className=" flex flex-col">
-                            <input className="py-3 px-2 bg-[#d5f2ec] rounded-lg" type="text" name="userLastName" id="userLastName" placeholder="Last Name" />
-                        </div>
-                        <div className=" flex flex-col">
-                            <input className="py-3 px-2 bg-[#d5f2ec] rounded-lg" type="email" name="userEmail" id="userEmail" placeholder="Your Email" />
-                        </div>
-                        <div className=" flex flex-col">
-                            <input className="py-3 px-2 bg-[#d5f2ec] rounded-lg" type="number" name="userNumber" id="userNumber" placeholder="Phone No." />
-                        </div>
+                            <div className=" flex flex-col">
+                                <input className="py-3 px-2 bg-[#d5f2ec] rounded-lg" type="email" name="userEmail" id="userEmail" placeholder="Your Email" />
+                            </div>
+                            <div className=" flex flex-col">
+                                <input className="py-3 px-2 bg-[#d5f2ec] rounded-lg" type="password" name="userPassword" id="userPassword" placeholder="Password" />
+                            </div>
                         <div className=" flex gap-5">
                             <Button title="Login" />
                             <button
