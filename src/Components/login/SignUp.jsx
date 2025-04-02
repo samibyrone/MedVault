@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../layout/Button.jsx";
 import { GoogleLogin } from '@react-oauth/google';
-import FacebookLogin from '@facebook/react-facebook-login';
+import { FacebookLogin } from '@facebook/react-facebook-login';
 
 export default function SignUp({ onSuccess }) {
 
