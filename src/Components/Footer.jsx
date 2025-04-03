@@ -81,13 +81,13 @@ const Footer = () => {
                     <h1 className=" font-medium text-xl pb-4 pt-5 md:pt-0">Contact Us</h1>
                     <nav className=" flex flex-col gap-2">
                         <Link to="/" spy={true} smooth={true} duration={500}>
-                            123 Elm Street, Suite 456 Springfield, IL 62701 United States
+                            312 Herbert Mahcualey Road, Sabo yaba, Lagos
                         </Link>
                         <Link to="/" spy={true} smooth={true} duration={500}>
                             support@care.com
                         </Link>
                         <Link to="/" spy={true} smooth={true} duration={500}>
-                            +123-456-7890
+                            +234-810-596-59
                         </Link>
                     </nav>
                 </div>
@@ -95,7 +95,7 @@ const Footer = () => {
             <div>
                 <p className=" text-center py-4">
                     @copyright developed by
-                    <span className=" text-hoverColor"> champion programmers</span> | All
+                    <span className=" text-hoverColor"> TEAM MEDVAULT</span> | All
                     rights reserved
                 </p>
             </div>
