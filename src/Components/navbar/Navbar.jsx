@@ -46,7 +46,7 @@ export const Navbar = () => {
     const [menu, setMenu] = useState(false);
     const [showForm, setShowForm] = useState(false);
     const [login, setLogin] = useState(false);
-    const[logout, setLogout] = useState(false);
+    const[signUp, setSignUp] = useState(false);
 
     const handleChange = () => {
         setMenu(!menu);
@@ -74,12 +74,12 @@ export const Navbar = () => {
         setLogin(false);
     };
 
-    const openLogout = () => {
+    const openSignUp = () => {
         setLogout(true);
         setMenu(false);
     };
 
-    const closeLogout = () => {
+    const closeSignUp = () => {
         setLogout(false);
     };
 
@@ -89,7 +89,7 @@ export const Navbar = () => {
                 <div className=" navbar flex flex-row justify-between p-5 md:px-32 px-5 bg-backgroundColor shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
                     <div className=" flex flex-row items-center cursor-pointer">
                         <Link to="home" spy={true} smooth={true} duration={500}>
-                            <h1 className=" text-3xl font-semibold">MedVault.</h1>
+                            <h1 className=" text-3xl font-bold text-blue-700">MedVault.</h1>
                         </Link>
                     </div>
 
@@ -112,12 +112,20 @@ export const Navbar = () => {
                         <Link to="blog" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer">
                             Blog
                         </Link>
+                        <Link to="blog" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer">
+                            Security
+                        </Link>
                     </nav>
 
                     <div className=" hidden lg:flex">
                         <button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out" onClick={openForm}>
                             Login
                         </button>
+                    </div>
+                    <div>
+                    <button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out" onClick={openForm}>
+                        SignUp
+                    </button>
                     </div>
 
                     {showForm && <Contact closeForm={closeForm} />}
@@ -153,10 +161,18 @@ export const Navbar = () => {
                     <Link to="blog" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer" onClick={closeMenu}>
                         Blog
                     </Link>
+                    <Link to="blog" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer">
+                        Security
+                    </Link>
 
                     <div className=" lg:hidden">
                         <Button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out" onClick={openForm}>
                             Login 
+                        </Button>
+                    </div>
+                    <div>
+                        <Button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out" onClick={openForm}>
+                            SignUp
                         </Button>
                     </div>
                 </div>
