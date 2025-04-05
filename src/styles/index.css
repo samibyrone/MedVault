@@ -24,8 +24,10 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: rgb(53, 58, 161);
   text-decoration: inherit;
+  width: max-content;
+  padding: 2px;
 }
 
 a:hover {
@@ -45,9 +47,14 @@ h1 {
   line-height: 1.1;
 }
 
+.med{
+  margin-left: -80px;
+}
+
 .navbar {
   background: aquamarine;
   max-width: 100vw;
+  display: flex;
 }
 
 button {
@@ -79,10 +86,10 @@ button:focus-visible {
   }
   button {
     /* background-color: #f9f9f9; */
-    background-color:lightblue;
+    background-color:dodgerblue;
     align-items: center;
     text-align: center;
     display: flex;
-    position: absolute;
+    position: relative;
   }
 }

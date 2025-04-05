@@ -86,14 +86,14 @@ export const Navbar = () => {
     return (
         <div className="  w-full z-10 text-white"> //container justify-between w-full z-50 text-white
             <div>
-                <div className=" navbar flex flex-row justify-between p-5 md:px-32 px-5 bg-backgroundColor shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+                <div className=" navbar flex flex-row justify-between p-4 gap-10 md:px-32 px-5 bg-backgroundColor shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
                     <div className=" flex flex-row items-center cursor-pointer">
                         <Link to="home" spy={true} smooth={true} duration={500}>
-                            <h1 className=" text-3xl font-bold text-blue-700">MedVault.</h1>
+                            <h1 className="med text-3xl font-bold text-blue-700">MedVault.</h1>
                         </Link>
                     </div>
 
-                    <nav className=" navbar hidden lg:flex flex-row items-center text-lg font-medium gap-8">
+                    <nav className=" navbar hidden lg:flex flex-row items-center text-lg font-semibold gap-8 pr-2">
                         <Link to="home" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer">
                             Home
                         </Link>
@@ -117,15 +117,13 @@ export const Navbar = () => {
                         </Link>
                     </nav>
 
-                    <div className=" hidden lg:flex">
+                    <div className=" hidden lg:flex gap-1">
                         <button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out" onClick={openForm}>
                             Login
                         </button>
-                    </div>
-                    <div>
-                    <button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out" onClick={openForm}>
-                        SignUp
-                    </button>
+                        <button className="bg-blue-400 text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out" onClick={openForm}>
+                            SignUp
+                        </button>
                     </div>
 
                     {showForm && <Contact closeForm={closeForm} />}
@@ -165,13 +163,11 @@ export const Navbar = () => {
                         Security
                     </Link>
 
-                    <div className=" lg:hidden">
+                    <div className=" lg:hidden gap-10">
                         <Button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out" onClick={openForm}>
                             Login 
                         </Button>
-                    </div>
-                    <div>
-                        <Button className="bg-brightColor text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out" onClick={openForm}>
+                        <Button className="bg-blue text-white px-4 py-2 rounded-md hover:bg-hoverColor transition duration-300 ease-in-out" onClick={openForm}>
                             SignUp
                         </Button>
                     </div>
