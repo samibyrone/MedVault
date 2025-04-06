@@ -93,7 +93,7 @@ export const Navbar = () => {
                         </Link>
                     </div>
 
-                    <nav className=" navbar hidden lg:flex flex-row items-center text-lg font-semibold gap-8 pr-2">
+                    <nav className=" navbar hidden lg:flex flex-row items-center font-semibold gap-8 pr-2">
                         <Link to="home" spy={true} smooth={true} duration={500} className=" hover:text-hoverColor transition-all cursor-pointer">
                             Home
                         </Link>
